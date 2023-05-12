@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<title>Audioguia del parque del retiro</title>
+	<script>
+		function agregarPestana() {
+			window.open("https://hashtagcolor.com");
+		}
+	</script>
+	<style>
+		h1 {
+			text-align: center;
+		}
+		p {
+			text-align: center;
+		}
+		body {
+			background-color: #fff9e4;
+		}
+		img {
+			width: 80%;
+			height: auto;
+			display: block;
+			margin: auto;
+			margin-top: 50px;
+			margin-bottom: 50px;
+		}
+		button {
+			display: block;
+			margin: auto;
+			margin-bottom: 20px;
+			padding: 10px;
+			font-size: 16px;
+			border-radius: 5px;
+			background-color: #ffffff;
+			color: #000000;
+			border: none;
+			cursor: pointer;
+		}
+		.image-container {
+			text-align: center;
+		}
+
+		.image-container img {
+			display: inline-block;
+			margin-right: 10px;
+		}
+		.button-container {
+			text-align: center;
+		}
+
+		.button-container button {
+			display: inline-block;
+			margin-right: 10px;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<img src="head.jpg" alt="Logo de mi sitio web">
+		<h1>La casa de las fieras</h1>
+	</header>
+	<button onclick="reproducirSonido('Casafieras1.mp3')">La casa de las fieras</button> 
+		<img src="Casafieras1.jpg" alt="Fotografía Casa de las fieras">
+	<button onclick="reproducirSonido('Casafieras2.mp3')">La fauna y la flora</button>
+		<img src="Casafieras2.jpg" alt="Fotografía Casa de las fieras">
+	<audio id="reproductor"></audio>
+	<script>
+		function reproducirSonido(nombreArchivo) {
+			var reproductor = document.getElementById("reproductor");
+			reproductor.src = nombreArchivo;
+			reproductor.play();
+		}
+	</script>
+</body>
+</html>

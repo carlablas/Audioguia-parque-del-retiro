@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<title>Audioguia del parque del retiro</title>
+	<style>
+		h1 {
+			text-align: center;
+		}
+		p {
+			text-align: center;
+		}
+		body {
+			background-color: #fff9e4;
+		}
+		img {
+			width: 80%;
+			height: auto;
+			display: block;
+			margin: auto;
+			margin-top: 50px;
+			margin-bottom: 50px;
+		}
+		button {
+			display: block;
+			margin: auto;
+			margin-bottom: 20px;
+			padding: 10px;
+			font-size: 16px;
+			border-radius: 5px;
+			background-color: #ffffff;
+			color: #000000;
+			border: none;
+			cursor: pointer;
+		}
+		.button-container {
+			text-align: center;
+		}
+
+		.button-container button {
+			display: inline-block;
+			margin-right: 10px;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<img src="head.jpg" alt="Logo de mi sitio web">
+		<h1>Palacio de cristal y palacio de Velázquez</h1>
+	</header>
+	<button onclick="reproducirSonido('Cristal.mp3')">Palacio de cristal</button> 
+	<img src="Palaciodecristal1.jpg" alt="Plano del parque del retiro">
+	<button onclick="reproducirSonido('Velazquez.mp3')">Palacio de Velázquez</button> 
+	<img src="Palaciodecristal2.jpg" alt="Plano del parque del retiro">
+	<audio id="reproductor"></audio>
+	<script>
+		function reproducirSonido(nombreArchivo) {
+			var reproductor = document.getElementById("reproductor");
+			reproductor.src = nombreArchivo;
+			reproductor.play();
+		}
+	</script>
+</body>
+</html>

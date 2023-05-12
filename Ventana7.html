@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<head>
+	<title>Audioguia del parque del retiro</title>
+	<style>
+		h1 {
+			text-align: center;
+		}
+		p {
+			text-align: center;
+		}
+		body {
+			background-color: #fff9e4;
+		}
+		img {
+			width: 80%;
+			height: auto;
+			display: block;
+			margin: auto;
+			margin-top: 50px;
+			margin-bottom: 50px;
+		}
+		button {
+			display: block;
+			margin: auto;
+			margin-bottom: 20px;
+			padding: 10px;
+			font-size: 16px;
+			border-radius: 5px;
+			background-color: #ffffff;
+			color: #000000;
+			border: none;
+			cursor: pointer;
+		}
+		.button-container {
+			text-align: center;
+		}
+
+		.button-container button {
+			display: inline-block;
+			margin-right: 10px;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<img src="head.jpg" alt="Logo de mi sitio web">
+		<h1>El lago y el sistema hidráulico</h1>
+	</header>
+	<button onclick="reproducirSonido('Lago1.mp3')">El lago del Retiro</button> 
+	<img src="Lago1.jpg" alt="Lago">
+	<button onclick="reproducirSonido('Lago2.mp3')">El huerto del francés</button> 
+	<img src="Lago2.jpg" alt="Plano del parque del retiro">
+	<button onclick="reproducirSonido('Lago3.mp3')">Las fuentes del Retiro</button> 
+	<img src="Lago3.jpg" alt="Plano del parque del retiro">
+	<audio id="reproductor"></audio>
+	<script>
+		function reproducirSonido(nombreArchivo) {
+			var reproductor = document.getElementById("reproductor");
+			reproductor.src = nombreArchivo;
+			reproductor.play();
+		}
+	</script>
+</body>
+</html>
